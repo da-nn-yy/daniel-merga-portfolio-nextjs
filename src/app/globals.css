@@ -57,3 +57,14 @@ html {
   color: #64ffda !important;
   font-weight: 100;
 }
+glass-effect {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(10, 25, 47, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Optional: Add smooth scrolling for the whole page */
+html {
+  scroll-behavior: smooth;
+}
