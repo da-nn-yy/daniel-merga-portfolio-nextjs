@@ -1,6 +1,20 @@
 'use client';
 import { motion } from 'framer-motion';
 import Typewriter from 'typewriter-effect';
+import { FiGithub, FiInstagram, FiLinkedin, FiMail } from 'react-icons/fi';
+import { LiaInstagram, LiaTelegram } from 'react-icons/lia';
+
+const SocialLink = ({ href, Icon }: { href: string; Icon: any }) => (
+  <motion.a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    whileHover={{ y: -5 }}
+    className="transition-colors text-textSecondary hover:text-secondary"
+  >
+    <Icon className="w-6 h-6" />
+  </motion.a>
+);
 
 const Hero = () => {
   return (
@@ -57,13 +71,40 @@ const Hero = () => {
         <motion.button
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
+          transition={{ delay: 0.1 }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="px-8 py-4 transition-colors border-2 rounded border-secondary text-secondary hover:bg-secondary/10"
+          className="px-8 py-4 transition-colors border-2 rounded-[100px] border-secondary text-secondary hover:bg-secondary/10"
         >
           Check out my work!
         </motion.button>
+        <motion.button
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="ml-5 px-8 py-4 transition-colors border-2 rounded-[100px] border-secondary text-secondary hover:bg-secondary/10"
+          >
+          <a  download>Download Cv</a>
+        </motion.button>
+        <motion.div className="flex text-[24px] gap-x-6 max-w-max mx-auto lg:mx-0"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      >
+                               <div className="mt-12">
+                                         <div className="flex justify-center space-x-8">
+                                           <SocialLink href="https://github.com/da-nn-yy/" Icon={FiGithub} />
+                                           <SocialLink href="https://www.linkedin.com/in/dani-boy-35552624b/" Icon={FiLinkedin} />
+                                           <SocialLink href="https://t.me/g_dnl" Icon={LiaTelegram} />
+                                           <SocialLink href="https://t.me/g_dnl" Icon={FiInstagram} />
+                                           <SocialLink href="mailto:your.email@example.com" Icon={FiMail} />
+                                         </div>
+                                       </div>
+                  </motion.div>
+
       </div>
     </div>
   );
