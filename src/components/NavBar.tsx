@@ -7,11 +7,15 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="fixed top-0 left-0 z-50 w-full px-4 py-3">
+    <div className="fixed top-0 left-0 z-50 w-full px-4 py-4">
       <motion.nav
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        className="flex items-center justify-between max-w-6xl p-4 mx-auto border shadow-lg backdrop-blur-md bg-primary/30 border-white/10 rounded-2xl shadow-black/20"
+        transition={{ duration: 0.5 }}
+        className="relative flex items-center justify-between max-w-6xl p-6 px-[50px] mx-auto backdrop-blur-md
+                   bg-secondary/10 rounded-[1000px] border-teal-300
+                   [background:linear-gradient(#0a192f,#0a192f)_padding-box,
+                   linear-gradient(to_right,#64ffda,#9f7aea,#ec4899)_border-box]"
       >
         <motion.div
           initial={{ x: -100, opacity: 0 }}
@@ -28,13 +32,12 @@ const Navbar = () => {
               key={item}
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: index * 0.1 }}
+              transition={{ delay: index * 0.2 }}
             >
               <Link
                 href={`#${item.toLowerCase()}`}
                 className="relative transition-colors text-textPrimary hover:text-secondary group"
               >
-                <span className="mr-1 text-secondary">{(index + 1).toString().padStart(2, '0')}.</span>
                 {item}
                 <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-secondary transition-all duration-300
                                group-hover:w-full"></span>
@@ -69,7 +72,10 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute left-0 right-0 p-4 mx-4 mt-2 border shadow-lg top-full rounded-xl backdrop-blur-md bg-primary/80 border-white/10"
+            className="absolute left-0 right-0 p-4 mx-4 mt-2 top-full backdrop-blur-md
+                      bg-primary/80 rounded-xl border border-transparent
+                      [background:linear-gradient(#0a192f,#0a192f)_padding-box,
+                      linear-gradient(to_right,#64ffda,#9f7aea,#ec4899)_border-box]"
           >
             {['About', 'Projects', 'Skills', 'Contact'].map((item, index) => (
               <motion.div
