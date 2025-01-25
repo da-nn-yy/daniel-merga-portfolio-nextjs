@@ -1,9 +1,9 @@
-'use claint'
+'use client';
 
 const About = () => {
-    return (
-        <div>About</div>
-    )
-  };
+  return (
+    <div>HI</div>
+  );
+};
 
 export default About;

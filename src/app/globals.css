@@ -37,3 +37,23 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #4db3a4;
 }
+
+.typewriter-container {
+  background: linear-gradient(to right, #4F46E5, #EC4899, #3B82F6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.Typewriter__wrapper {
+  font-weight: bold;
+  background: linear-gradient(to right, #4F46E5, #EC4899, #3B82F6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.Typewriter__cursor {
+  color: #64ffda !important;
+  font-weight: 100;
+}
