@@ -4,13 +4,13 @@ import Typewriter from 'typewriter-effect';
 
 const Hero = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center px-5 bg-primary">
+    <div className="flex items-center justify-center min-h-screen px-5 bg-primary">
       <div className="max-w-4xl">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="text-secondary mb-5"
+          className="mb-5 text-secondary"
         >
           Hi, my name is
         </motion.p>
@@ -18,9 +18,9 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="text-5xl md:text-7xl font-bold mb-5 text-textPrimary"
+          className="mb-5 text-5xl font-bold md:text-7xl text-textPrimary"
         >
-          Your Name.
+          Daniel Merga
         </motion.h1>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -49,7 +49,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
-          className="text-textSecondary max-w-2xl mb-10"
+          className="max-w-2xl mb-10 text-textSecondary"
         >
           I'm a creative professional specializing in building exceptional digital experiences.
           Currently, I'm focused on creating impactful digital content and solutions.
@@ -57,10 +57,10 @@ const Hero = () => {
         <motion.button
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
+          transition={{ delay: 0.2 }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="border-2 border-secondary text-secondary px-8 py-4 rounded hover:bg-secondary/10 transition-colors"
+          className="px-8 py-4 transition-colors border-2 rounded border-secondary text-secondary hover:bg-secondary/10"
         >
           Check out my work!
         </motion.button>

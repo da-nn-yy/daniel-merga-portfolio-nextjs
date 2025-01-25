@@ -10,7 +10,7 @@ const Navbar = () => {
         <motion.nav
           initial={{y:-100}}
           animate={{y:0}}
-          className="fixed w-full top-0 items-center justify-between p-5 bg-[#0a192f]/90 backdrop-blur-sm z-50">
+          className="fixed flex w-full top-0 items-center justify-between p-5 bg-[#0a192f]/90 backdrop-blur-sm z-50">
             <motion.div
               initial={{x:-100, opacity:0}}
               animate={{x:0, opacity:1}}
@@ -18,7 +18,7 @@ const Navbar = () => {
                 Portfolio
             </motion.div>
 
-            <div className="hidden md:flex space-x-8">
+            <div className="hidden space-x-8 md:flex">
               {["About", "Projects", "Skills", "Contact"].map((item) => (
                 <Link
                   key={item}
