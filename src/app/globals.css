@@ -39,7 +39,7 @@ html {
 }
 
 .typewriter-container {
-  background: linear-gradient(to right, #4F46E5, #EC4899, #3B82F6);
+  background: linear-gradient(to right, #4F46E5, #64ffda, #3B82F6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -47,7 +47,7 @@ html {
 
 .Typewriter__wrapper {
   font-weight: bold;
-  background: linear-gradient(to right, #4F46E5, #EC4899, #3B82F6);
+  background: linear-gradient(to right, #4F46E5, #64ffda, #3B82F6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
