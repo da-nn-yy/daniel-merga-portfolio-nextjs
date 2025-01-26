@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion';
 import Typewriter from 'typewriter-effect';
 import { FiGithub, FiInstagram, FiLinkedin, FiMail } from 'react-icons/fi';
-import { LiaInstagram, LiaTelegram } from 'react-icons/lia';
+import { LiaTelegram } from 'react-icons/lia';
 
 const SocialLink = ({ href, Icon }: { href: string; Icon: any }) => (
   <motion.a
@@ -40,7 +40,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="text-4xl md:text-6xl font-bold mb-8 h-[80px]"
+          className="text-4xl md:text-6xl font-bold mb-7 h-[80px]"
         >
           <div className="typewriter-container">
             <Typewriter
@@ -76,7 +76,7 @@ const Hero = () => {
           whileTap={{ scale: 0.95 }}
           className="px-8 py-4 transition-colors border-2 rounded-[100px] border-secondary text-secondary hover:bg-secondary/10"
         >
-          Check out my work!
+          <a href='#projects'>Check out my work!</a>
         </motion.button>
         <motion.button
           initial={{ opacity: 0, y: 20 }}
