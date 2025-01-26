@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { GoPersonFill } from 'react-icons/go';
 
 const About = () => {
   return (
@@ -15,9 +16,10 @@ const About = () => {
         >
           {/* Text Content */}
           <div className="order-2 md:order-1">
-            <h2 className="mb-4 text-3xl font-bold md:text-4xl">
-              <span className="text-secondary">01.</span> About Me
-            </h2>
+            <div className='inline-flex gap-3'>
+                <span className="text-4xl text-secondary"><GoPersonFill/></span>
+                <h2 className="flex mb-4 text-3xl font-bold md:text-4xl">About Me</h2>
+            </div>
             <div className="space-y-4 text-textSecondary">
               <p>
                 Hello! My name is Daniel Merga and I enjoy creating things that live on the internet.
@@ -47,10 +49,10 @@ const About = () => {
               <div className="absolute inset-0 transform translate-x-5 translate-y-5 rounded-lg bg-secondary/20" />
               <div className="absolute inset-0 overflow-hidden border-2 rounded-lg bg-primary border-secondary">
                 <Image
-                  src="/your-photo.jpg" // Add your photo to the public folder
+                  src="/danAbout.png" // Add your photo to the public folder
                   alt="Profile"
                   fill
-                  className="object-cover transition-all duration-300 hover:filter hover:grayscale"
+                  className="duration-300 w-[100px] trdansition-all hover:filter hover:grayscale"
                 />
               </div>
             </div>
