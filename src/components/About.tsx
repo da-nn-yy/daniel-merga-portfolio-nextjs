@@ -22,9 +22,11 @@ const About = () => {
             </div>
             <div className="space-y-4 text-textSecondary">
               <p>
-                Hello! My name is Daniel Merga and I enjoy creating things that live on the internet.
-                My interest in web development started back in [year] when I decided to try editing
-                custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!
+ I am Daniel Merga, a dedicated Computer Science and Engineering student at Adama Science and
+ Technology University (ASTU), driven by a passion for technology and innovation. Currently seeking
+ internship opportunities to broaden my skill set and make tangible contributions to real-world projects.
+ Committed to continuous learning and personal growth, I am enthusiastic about exploring new
+ technologies and methodologies in the field of computer science.
               </p>
               <p>
                 Fast-forward to today, and I've had the privilege of working at [your experiences].
@@ -49,7 +51,7 @@ const About = () => {
               <div className="absolute inset-0 transform translate-x-5 translate-y-5 rounded-lg bg-secondary/20" />
               <div className="absolute inset-0 overflow-hidden border-2 rounded-lg bg-primary border-secondary">
                 <Image
-                  src="/danAbout.png" // Add your photo to the public folder
+                  src="/danAbout.png"
                   alt="Profile"
                   fill
                   className="duration-300 w-[100px] trdansition-all hover:filter hover:grayscale"
