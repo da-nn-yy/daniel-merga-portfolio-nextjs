@@ -13,10 +13,9 @@ import {
   SiGit,
   SiTailwindcss,
   SiTypescript,
-  SiNodedotjs,
-  SiAdobepremierepro
 } from 'react-icons/si';
 import { VscVscode } from 'react-icons/vsc';
+import { SiHyperskill } from 'react-icons/si';
 
 const skills = [
   {
@@ -27,7 +26,6 @@ const skills = [
       { name: "Adobe XD", icon: SiAdobexd, color: "text-[#FF61F6]" },
       { name: "Figma", icon: SiFigma, color: "text-[#F24E1E]" },
       { name: "After Effects", icon: SiAdobeaftereffects, color: "text-[#9999FF]" },
-      { name: "Premiere Pro", icon: SiAdobepremierepro, color: "text-[#9999FF]" },
     ]
   },
   {
@@ -38,7 +36,6 @@ const skills = [
       { name: "JavaScript", icon: SiJavascript, color: "text-[#F7DF1E]" },
       { name: "TypeScript", icon: SiTypescript, color: "text-[#3178C6]" },
       { name: "Python", icon: SiPython, color: "text-[#3776AB]" },
-      { name: "Node.js", icon: SiNodedotjs, color: "text-[#339933]" },
       { name: "Git", icon: SiGit, color: "text-[#F05032]" },
       { name: "Tailwind", icon: SiTailwindcss, color: "text-[#06B6D4]" },
       { name: "VS Code", icon: VscVscode, color: "text-[#007ACC]" },
@@ -66,9 +63,10 @@ const Skills = () => {
         viewport={{ once: true }}
         className="max-w-6xl mx-auto"
       >
-        <h2 className="mb-8 text-3xl font-bold md:text-4xl">
-          <span className="text-secondary">03.</span> Skills
-        </h2>
+        <div className='inline-flex gap-3'>
+              <span className="text-4xl text-secondary"><SiHyperskill /></span>
+              <h2 className="flex mb-4 text-3xl font-bold md:text-4xl">Skills</h2>
+        </div>
 
         {skills.map((skillCategory, index) => (
           <div key={skillCategory.category} className="mb-12">
