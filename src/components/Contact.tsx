@@ -1,8 +1,10 @@
 'use client';
 import { motion } from 'framer-motion';
-import { FiGithub, FiLinkedin, FiTwitter, FiMail } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiInstagram, FiMail } from 'react-icons/fi';
 import { useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
+import { LiaTelegram } from 'react-icons/lia';
+import {BsChatFill} from 'react-icons/bs'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -56,9 +58,10 @@ const Contact = () => {
         className="max-w-4xl mx-auto"
       >
         <div className="mb-12 text-center">
-          <h2 className="mb-8 text-3xl font-bold md:text-4xl">
-            <span className="text-secondary">04.</span> What's Next?
-          </h2>
+          <div className='inline-flex gap-3'>
+              <span className="text-4xl text-secondary"><BsChatFill/></span>
+              <h2 className="flex mb-4 text-3xl font-bold md:text-4xl">Contact </h2>
+          </div>
           <h3 className="mb-4 text-4xl font-bold md:text-5xl">Get In Touch</h3>
           <p className="max-w-xl mx-auto mb-8 text-textSecondary">
             I'm currently looking for new opportunities. Send me a message and I'll try my best to get back to you!
@@ -124,9 +127,10 @@ const Contact = () => {
 
         <div className="mt-12">
           <div className="flex justify-center space-x-8">
-            <SocialLink href="https://github.com" Icon={FiGithub} />
-            <SocialLink href="https://linkedin.com" Icon={FiLinkedin} />
-            <SocialLink href="https://twitter.com" Icon={FiTwitter} />
+            <SocialLink href="https://github.com/da-nn-yy/" Icon={FiGithub} />
+            <SocialLink href="https://www.linkedin.com/in/dani-boy-35552624b/" Icon={FiLinkedin} />
+            <SocialLink href="https://t.me/g_dnl" Icon={LiaTelegram} />
+            <SocialLink href="https://www.instagram.com/da_nnn_yyy/?__pwa=1#" Icon={FiInstagram} />
             <SocialLink href="mailto:your.email@example.com" Icon={FiMail} />
           </div>
         </div>
