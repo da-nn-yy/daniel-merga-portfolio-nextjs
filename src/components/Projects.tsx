@@ -1,17 +1,19 @@
 'use client';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { FiGithub, FiExternalLink } from 'react-icons/fi';
+import { FiGithub, FiExternalLink} from 'react-icons/fi';
+import { FaCode } from 'react-icons/fa';
+
 
 const projects = [
   {
     title: 'Project One',
     description: 'A web application that does something amazing. Built with React, Node.js, and MongoDB.',
-    image: '/project1.jpg',
-    tags: ['React', 'Node.js', 'MongoDB'],
+    image: '/danAbout.png',
+    tags: ['React', 'Next js'],
     github: 'https://github.com',
     live: 'https://example.com',
-  },
+  }
   // Add more projects here
 ];
 
@@ -25,9 +27,10 @@ const Projects = () => {
         viewport={{ once: true }}
         className="max-w-6xl mx-auto"
       >
-        <h2 className="mb-8 text-3xl font-bold md:text-4xl">
-          <span className="text-secondary">02.</span> Some Things I've Built
-        </h2>
+        <div className='inline-flex gap-3'>
+                        <span className="text-4xl text-secondary"><FaCode/></span>
+                        <h2 className="flex mb-4 text-3xl font-bold md:text-4xl">Projects</h2>
+                    </div>
 
         <div className="space-y-20">
           {projects.map((project, index) => (
