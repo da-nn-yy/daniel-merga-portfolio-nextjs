@@ -4,6 +4,7 @@ import Typewriter from 'typewriter-effect';
 import { FiGithub, FiInstagram, FiLinkedin, FiMail } from 'react-icons/fi';
 import { LiaTelegram } from 'react-icons/lia';
 
+
 const SocialLink = ({ href, Icon }: { href: string; Icon: any }) => (
   <motion.a
     href={href}
@@ -86,7 +87,7 @@ const Hero = () => {
           whileTap={{ scale: 0.95 }}
           className="ml-5 px-8 py-4 transition-colors border-2 rounded-[100px] border-secondary text-secondary hover:bg-secondary/10"
           >
-          <a  download>Download Cv</a>
+          Download Cv
         </motion.button>
         <motion.div className="flex text-[24px] gap-x-6 max-w-max mx-auto lg:mx-0"
                       initial={{ opacity: 0, y: 20 }}
