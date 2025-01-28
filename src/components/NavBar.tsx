@@ -13,9 +13,7 @@ const Navbar = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
         className="relative flex items-center justify-between max-w-6xl p-6 px-[50px] mx-auto backdrop-blur-md
-                   bg-secondary/10 rounded-[1000px] border-teal-300
-                   [background:linear-gradient(#0a192f,#0a192f)_padding-box,
-                   linear-gradient(to_right,#64ffda,#9f7aea,#ec4899)_border-box]"
+                   bg-secondary/10 rounded-[1000px] border-teal-3"
       >
         <motion.div
           initial={{ x: -100, opacity: 0 }}
@@ -27,7 +25,7 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="items-center hidden space-x-8 md:flex">
-          {['About', 'Projects', 'Skills', 'Contact'].map((item, index) => (
+          {['Home','About', 'Skills', 'Projects', 'Contact'].map((item, index=+1) => (
             <motion.div
               key={item}
               initial={{ y: -100, opacity: 0 }}
@@ -72,12 +70,9 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute left-0 right-0 p-4 mx-4 mt-2 top-full backdrop-blur-md
-                      bg-primary/80 rounded-xl border border-transparent
-                      [background:linear-gradient(#0a192f,#0a192f)_padding-box,
-                      linear-gradient(to_right,#64ffda,#9f7aea,#ec4899)_border-box]"
+            className="absolute left-0 right-0 p-4 mx-4 mt-2 border border-transparent shadow-lg top-full backdrop-blur-md bg-primary/90 rounded-xl"
           >
-            {['About', 'Projects', 'Skills', 'Contact'].map((item, index) => (
+            {['Home','About', 'Skills', 'Projects', 'Contact'].map((item, index) => (
               <motion.div
                 key={item}
                 initial={{ x: -50, opacity: 0 }}
