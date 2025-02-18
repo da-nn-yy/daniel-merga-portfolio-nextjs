@@ -5,6 +5,7 @@ import { FiGithub, FiInstagram, FiLinkedin, FiMail } from 'react-icons/fi';
 import { LiaTelegram } from 'react-icons/lia';
 
 
+
 const SocialLink = ({ href, Icon }: { href: string; Icon: any }) => (
   <motion.a
     href={href}
@@ -92,7 +93,27 @@ const Hero = () => {
           whileTap={{ scale: 0.95 }}
           className="ml-5 px-8 py-4 transition-colors border-2 rounded-[100px] border-secondary text-secondary hover:bg-secondary/10"
           >
+          <a
+              href='/DanielMerga-Resume.pdf'
+              download="DanielMerga-Resume.pdf"
+              className='flex items-center gap-2'>
           Download Cv
+          <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+              />
+            </svg>
+          </a>
+
         </motion.button>
         <motion.div className="flex text-[24px] gap-x-6 max-w-max mx-auto lg:mx-0"
                       initial={{ opacity: 0, y: 20 }}
