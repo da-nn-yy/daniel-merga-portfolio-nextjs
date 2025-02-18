@@ -19,7 +19,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className="min-h-screen px-5 py-20">
+    <div className="min-h-screen px-5 py-20 bg-gradient-to-b from-primary/5 to-transparent">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -27,54 +27,67 @@ const Projects = () => {
         viewport={{ once: true }}
         className="max-w-6xl mx-auto"
       >
-        <div className='inline-flex gap-3'>
-                        <span className="text-4xl text-secondary"><FaCode/></span>
-                        <h2 className="flex mb-4 text-3xl font-bold md:text-4xl">Projects</h2>
-                    </div>
+        <div className='inline-flex items-center gap-3 mb-12'>
+          <span className="text-4xl text-secondary"><FaCode/></span>
+          <h2 className="text-3xl font-bold md:text-4xl">Projects</h2>
+        </div>
 
-        <div className="space-y-20">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className={`relative grid md:grid-cols-2 gap-4 ${
-                index % 2 === 0 ? 'md:text-left' : 'md:text-right md:flex-row-reverse'
-              }`}
+              className="group relative overflow-hidden rounded-xl bg-[#112240] hover:bg-[#1a2f55] transition-all duration-300"
             >
-              {/* Project Image */}
-              <div className="relative h-64 overflow-hidden rounded-lg md:h-96">
+              <div className="relative h-48 overflow-hidden">
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 transition-all duration-300 bg-primary/80 hover:bg-transparent" />
+                <div className="absolute inset-0 bg-primary/40 group-hover:bg-primary/20 transition-all duration-300" />
               </div>
 
-              {/* Project Info */}
-              <div className="flex flex-col justify-center">
-                <p className="mb-2 text-secondary">Featured Project</p>
-                <h3 className="mb-4 text-2xl font-bold">{project.title}</h3>
-                <div className="bg-[#112240] p-6 rounded-lg mb-4">
-                  <p className="text-textSecondary">{project.description}</p>
-                </div>
-                <div className="flex flex-wrap justify-start gap-2 mb-4 md:justify-end">
+              <div className="p-6">
+                <p className="text-secondary text-sm mb-2">Featured Project</p>
+                <h3 className="text-xl font-bold mb-3 group-hover:text-secondary transition-colors">
+                  {project.title}
+                </h3>
+                <p className="text-textSecondary text-sm mb-4">
+                  {project.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
-                    <span key={tag} className="text-sm text-textSecondary">
+                    <span
+                      key={tag}
+                      className="px-3 py-1 text-xs rounded-full bg-secondary/10 text-secondary"
+                    >
                       {tag}
                     </span>
                   ))}
                 </div>
-                <div className="flex justify-start gap-4 md:justify-end">
-                  <a href={project.github} target="_blank" rel="noopener noreferrer">
-                    <FiGithub className="w-6 h-6 transition-colors hover:text-secondary" />
+
+                <div className="flex gap-4">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-secondary transition-colors"
+                  >
+                    <FiGithub className="w-5 h-5" />
                   </a>
-                  <a href={project.live} target="_blank" rel="noopener noreferrer">
-                    <FiExternalLink className="w-6 h-6 transition-colors hover:text-secondary" />
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-secondary transition-colors"
+                  >
+                    <FiExternalLink className="w-5 h-5" />
                   </a>
                 </div>
               </div>
