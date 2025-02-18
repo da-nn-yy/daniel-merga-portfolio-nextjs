@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { FiGithub, FiExternalLink} from 'react-icons/fi';
 import { FaCode } from 'react-icons/fa';
-
+import { useState } from 'react';
 
 const projects = [
   {
@@ -18,6 +18,9 @@ const projects = [
 ];
 
 const Projects = () => {
+  const [showAll, setShowAll] = useState(false);
+  const projectsToShow = showAll ? projects : projects.slice(0, 3);
+
   return (
     <div className="min-h-screen px-5 py-20 bg-gradient-to-b from-primary/5 to-transparent">
       <motion.div
@@ -33,7 +36,7 @@ const Projects = () => {
         </div>
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project, index) => (
+          {projectsToShow.map((project, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 50 }}
@@ -94,6 +97,22 @@ const Projects = () => {
             </motion.div>
           ))}
         </div>
+
+        {projects.length > 3 && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            className="flex justify-center mt-12"
+          >
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="px-6 py-3 rounded-lg bg-secondary/10 text-secondary hover:bg-secondary/20 transition-colors duration-300"
+            >
+              {showAll ? 'Show Less' : 'Show More'}
+            </button>
+          </motion.div>
+        )}
       </motion.div>
     </div>
   );
