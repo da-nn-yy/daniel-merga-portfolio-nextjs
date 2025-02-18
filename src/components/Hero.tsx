@@ -66,8 +66,13 @@ const Hero = () => {
           transition={{ delay: 0.5 }}
           className="max-w-2xl mb-10 text-textSecondary"
         >
-          I'm a creative professional specializing in building exceptional digital experiences.
-          Currently, I'm focused on creating impactful digital content and solutions.
+          🔭 I’m trying ma best to be a Fullstack-developer
+
+📚 I'm currently learning at Adama Science and technology University
+
+✅ Intersted in graphics,web design and video editing
+
+⚡ In my free time I would like to watch anime.
         </motion.p>
         <motion.button
           initial={{ opacity: 0, y: 20 }}
