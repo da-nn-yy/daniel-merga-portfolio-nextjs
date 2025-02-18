@@ -80,26 +80,29 @@ const Hero = () => {
         <motion.button
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
+          transition={{ delay: 0.3}}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="px-4 py-3 md:px-8 md:py-4 transition-colors border-2 rounded-[100px] border-secondary text-secondary hover:bg-secondary/10 text-sm md:text-base"
         >
-          <a href='#projects'>Check out my work!</a>
+          <a href='#projects'
+          className='px-4 py-3 md:px-8 md:py-4 transition-colors border-2 rounded-[100px] border-secondary text-secondary hover:bg-secondary/10 text-sm md:text-base'
+          >
+            Check out my work!
+          </a>
         </motion.button>
         <motion.button
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
+          transition={{ delay: 0.3}}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="ml-3 md:ml-5 px-4 py-3 md:px-8 md:py-4 transition-colors border-2 rounded-[100px] border-secondary text-secondary hover:bg-secondary/10 text-sm md:text-base"
+
         >
           <a
             href="/DanielMerga-Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className='flex items-center gap-2'
+            className='flex items-center gap-2 ml-3 md:ml-5 px-4 py-3 md:px-8 md:py-4 transition-colors border-2 rounded-[100px] border-secondary text-secondary hover:bg-secondary/10 text-sm md:text-base'
           >
             <TbCloudDownload/>
             Resume
