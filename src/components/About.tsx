@@ -14,7 +14,7 @@ const About = () => {
           viewport={{ once: true }}
           className="grid items-center gap-8 md:grid-cols-2"
         >
-          {/* Text Content */}
+         {/* Dan about text */}
           <div className="order-2 md:order-1">
             <div className='inline-flex gap-3'>
                 <span className="text-4xl text-secondary"><GoPersonFill/></span>
@@ -29,13 +29,13 @@ const About = () => {
  technologies and methodologies in the field of computer science.
               </p>
               <p>
-                Fast-forward to today, and I've had the privilege of working at [your experiences].
+                Fast-forward to today, and I've had the privilege of working at Web developing,Graphics and Video.
                 My main focus these days is building accessible, inclusive products and digital
                 experiences for a variety of clients.
               </p>
               <p>Here are a few technologies I've been working with recently:</p>
               <ul className="grid grid-cols-2 gap-2 list-none">
-                {['JavaScript (ES6+)', 'TypeScript', 'React', 'Next.js', 'Node.js', 'Tailwind CSS'].map((tech) => (
+                {['JavaScript (ES6+)', 'TypeScript', 'React', 'Next.js', 'Tailwind CSS'].map((tech) => (
                   <li key={tech} className="flex items-center">
                     <span className="mr-2 text-secondary">▹</span>
                     {tech}
