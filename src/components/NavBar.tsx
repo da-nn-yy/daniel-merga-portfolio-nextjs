@@ -23,7 +23,7 @@ const Navbar = () => {
           Portfolio
         </motion.div>
 
-        {/* Desktop Menu */}
+         {/* for Desktopssssssssssssssssss nd PC */}
         <div className="items-center hidden space-x-8 md:flex">
           {['Home','About', 'Skills', 'Projects', 'Contact'].map((item, index=+1) => (
             <motion.div
@@ -44,7 +44,7 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* Mobileeeeeeeeeeeeeeee btn */}
         <button
           className="transition-colors md:hidden text-textPrimary hover:text-secondary"
           onClick={() => setIsOpen(!isOpen)}
@@ -64,7 +64,7 @@ const Navbar = () => {
           </svg>
         </button>
 
-        {/* Mobile Menu */}
+        {/* Mobile phone viewwwwwwwwwwwwww */}
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, y: -20 }}
