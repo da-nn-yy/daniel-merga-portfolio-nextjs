@@ -13,6 +13,38 @@ const projects = [
     tags: ['React', 'Next js'],
     github: 'https://github.com',
     live: 'https://example.com',
+  },
+   {
+    title: 'Project One',
+    description: 'A web application that does something amazing. Built with React, Node.js, and MongoDB.',
+    image: '/danAbout.png',
+    tags: ['React', 'Next js'],
+    github: 'https://github.com',
+    live: 'https://example.com',
+  },
+   {
+    title: 'Project One',
+    description: 'A web application that does something amazing. Built with React, Node.js, and MongoDB.',
+    image: '/danAbout.png',
+    tags: ['React', 'Next js'],
+    github: 'https://github.com',
+    live: 'https://example.com',
+  },
+   {
+    title: 'Project One',
+    description: 'A web application that does something amazing. Built with React, Node.js, and MongoDB.',
+    image: '/danAbout.png',
+    tags: ['React', 'Next js'],
+    github: 'https://github.com',
+    live: 'https://example.com',
+  },
+   {
+    title: 'Project One',
+    description: 'A web application that does something amazing. Built with React, Node.js, and MongoDB.',
+    image: '/danAbout.png',
+    tags: ['React', 'Next js'],
+    github: 'https://github.com',
+    live: 'https://example.com',
   }
   // Add more projects here
 ];
@@ -102,7 +134,7 @@ const Projects = () => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
+            transition={{ delay: 0.6 }}
             className="flex justify-center mt-12"
           >
             <button
