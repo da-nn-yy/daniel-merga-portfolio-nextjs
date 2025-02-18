@@ -139,7 +139,7 @@ const Projects = () => {
           >
             <button
               onClick={() => setShowAll(!showAll)}
-              className="px-6 py-3 rounded-lg bg-secondary/10 text-secondary hover:bg-secondary/20 transition-colors duration-300"
+              className='px-4 py-3 md:px-8 md:py-4 transition-colors border-2 rounded-[100px] border-secondary text-secondary hover:bg-secondary/10 text-sm md:text-base duration-300'
             >
               {showAll ? 'Show Less' : 'Show More'}
             </button>
