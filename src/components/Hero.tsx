@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import Typewriter from 'typewriter-effect';
 import { FiGithub, FiInstagram, FiLinkedin, FiMail } from 'react-icons/fi';
 import { LiaTelegram } from 'react-icons/lia';
+import { TbCloudDownload } from 'react-icons/tb';
+
 
 
 
@@ -67,7 +69,7 @@ const Hero = () => {
           transition={{ delay: 0.5 }}
           className="max-w-2xl mb-10 text-textSecondary"
         >
-          🔭 I’m trying ma best to be a Fullstack-developer
+          🔭 I'm trying ma best to be a Fullstack-developer
 
 📚 I'm currently learning at Adama Science and technology University
 
@@ -81,7 +83,7 @@ const Hero = () => {
           transition={{ delay: 0.1 }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="px-8 py-4 transition-colors border-2 rounded-[100px] border-secondary text-secondary hover:bg-secondary/10"
+          className="px-4 py-3 md:px-8 md:py-4 transition-colors border-2 rounded-[100px] border-secondary text-secondary hover:bg-secondary/10 text-sm md:text-base"
         >
           <a href='#projects'>Check out my work!</a>
         </motion.button>
@@ -91,29 +93,17 @@ const Hero = () => {
           transition={{ delay: 0.1 }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="ml-5 px-8 py-4 transition-colors border-2 rounded-[100px] border-secondary text-secondary hover:bg-secondary/10"
-          >
+          className="ml-3 md:ml-5 px-4 py-3 md:px-8 md:py-4 transition-colors border-2 rounded-[100px] border-secondary text-secondary hover:bg-secondary/10 text-sm md:text-base"
+        >
           <a
-              href='/DanielMerga-Resume.pdf'
-              download="DanielMerga-Resume.pdf"
-              className='flex items-center gap-2'>
-          Download Cv
-          <svg
-              className="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-              />
-            </svg>
+            href="/DanielMerga-Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className='flex items-center gap-2'
+          >
+            <TbCloudDownload/>
+            Resume
           </a>
-
         </motion.button>
         <motion.div className="flex text-[24px] gap-x-6 max-w-max mx-auto lg:mx-0"
                       initial={{ opacity: 0, y: 20 }}
