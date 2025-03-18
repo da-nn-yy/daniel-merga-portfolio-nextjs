@@ -20,7 +20,7 @@ const Navbar = () => {
           animate={{ x: 0, opacity: 1 }}
           className="text-2xl font-bold text-secondary"
         >
-          Portfolio
+          DAN.
         </motion.div>
 
          {/* for Desktopssssssssssssssssss nd PC */}
