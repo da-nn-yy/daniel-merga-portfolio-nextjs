@@ -5,9 +5,6 @@ import { FiGithub, FiInstagram, FiLinkedin, FiMail } from 'react-icons/fi';
 import { LiaTelegram } from 'react-icons/lia';
 import { TbCloudDownload } from 'react-icons/tb';
 
-
-
-
 const SocialLink = ({ href, Icon }: { href: string; Icon: any }) => (
   <motion.a
     href={href}
